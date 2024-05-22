@@ -1,0 +1,53 @@
+type Query{
+  patientById(id:ID!):Patient
+  doctorById(id: ID!): Doctor
+  doctorall:[Doctor]
+  patientall: [Patient]
+}
+
+type Mutation {
+    addPatient(patient: PatientInput): String
+    addDoctor(doctor: DoctorInput): String
+    updateDoctor(id: ID!,doctor: DoctorInput): String
+
+    
+}
+
+
+type Subscription {
+  newDoctorAdded: [Doctor]
+}
+
+
+type Doctor{
+    id:ID!
+    name:String
+	degree:String
+	department:String
+	age:Int
+	
+}
+type Patient{
+
+    id:ID!
+    name:String
+	disease:String
+	age:Int
+	doctor:Doctor
+
+}
+input PatientInput {
+    name: String!
+    disease: String!
+    age: Int
+    doctorId: ID!
+}
+
+input DoctorInput {
+    name: String!
+    degree: String
+    department: String
+    age: Int
+}
+
+
