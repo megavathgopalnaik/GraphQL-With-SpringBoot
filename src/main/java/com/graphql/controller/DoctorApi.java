@@ -1,8 +1,6 @@
 package com.graphql.controller;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -10,15 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
-import org.springframework.graphql.data.method.annotation.SubscriptionMapping;
 import org.springframework.stereotype.Controller;
 
-import com.graphql.dto.DoctorAddedEvent;
 import com.graphql.dto.DoctorInput;
 import com.graphql.entity.Doctor;
 import com.graphql.service.DoctorService;
 
-import reactor.core.publisher.Flux;
+
 
 @Controller
 public class DoctorApi {

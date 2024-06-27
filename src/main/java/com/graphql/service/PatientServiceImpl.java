@@ -46,4 +46,5 @@ public class PatientServiceImpl implements PatientService {
 		Patient pat= patientRepo.save(patientn);
 		String id=String.valueOf(pat.getId());
 		return "patient added successfully and id is "+id;
-	}}
+	}
+	}
